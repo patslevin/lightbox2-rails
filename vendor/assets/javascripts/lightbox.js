@@ -74,6 +74,7 @@
     var self = this;
     $(document).on('click', 'a[rel^=lightbox], area[rel^=lightbox], a[data-lightbox], area[data-lightbox]', function(event) {
       self.start($(event.currentTarget));
+      console.log(event);
       return false;
     });
   };
