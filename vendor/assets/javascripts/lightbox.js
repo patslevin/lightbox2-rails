@@ -62,7 +62,7 @@
 
   Lightbox.prototype.init = function() {
     var self = this;
-    $(function () {
+    $(document).on('turbolinks:load', function() {
       self.enable();
       self.build();
     });
@@ -72,9 +72,8 @@
   // that contain 'lightbox'. When these are clicked, start lightbox.
   Lightbox.prototype.enable = function() {
     var self = this;
-    $(document).on('click', 'a[rel^=lightbox], area[rel^=lightbox], a[data-lightbox], area[data-lightbox]', function(event) {
+    $('body').on('click', 'a[rel^=lightbox], area[rel^=lightbox], a[data-lightbox], area[data-lightbox]', function(event) {
       self.start($(event.currentTarget));
-      console.log(event);
       return false;
     });
   };
