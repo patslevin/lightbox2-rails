@@ -66,6 +66,9 @@
       self.enable();
       self.build();
     });
+    $(document).on('turbolinks:before-cache', function() {
+      self.destroy();
+    });
   };
 
   // Loop through anchors and areamaps looking for either data-lightbox attributes or rel attributes
@@ -76,6 +79,11 @@
       self.start($(event.currentTarget));
       return false;
     });
+  };
+  
+  Lightbox.prototype.destroy = function() {
+    $('#lightbox').remove();
+    $('#lightboxOverlay').remove();
   };
 
   // Build html for the lightbox and the overlay.
