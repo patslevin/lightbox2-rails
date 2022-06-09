@@ -222,6 +222,7 @@
 
     this.disableKeyboardNav();
     var $image = this.$lightbox.find('.lb-image');
+    var $video = this.$lightbox.find('.lb-video');
 
     this.$overlay.fadeIn(this.options.fadeDuration);
 
@@ -243,7 +244,7 @@
 
       if (self.album[imageNumber].isVideo) {
         $image.attr('src', 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
-        $image = this.$lightbox.find('.lb-video');
+        $image = $video;
       }
       
       $image.attr('src', self.album[imageNumber].link);
