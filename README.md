@@ -5,7 +5,7 @@
 
 [Lightbox2](http://lokeshdhakar.com/projects/lightbox2) for Rails asset pipeline
 
-- Modified for [Turbolinks](https://github.com/rails/turbolinks) and [Sprockets](https://github.com/sstephenson/sprockets)' asset digests compatibility
+- Modified for Turbo and [Sprockets](https://github.com/sstephenson/sprockets)' asset digests compatibility
 
 - Lightbox2 version: [2.8.2](https://github.com/lokesh/lightbox2/releases/tag/v2.8.2)
 

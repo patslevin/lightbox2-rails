@@ -62,11 +62,11 @@
 
   Lightbox.prototype.init = function() {
     var self = this;
-    $(document).on('turbolinks:load', function() {
+    $(document).on('turbo:load', function() {
       self.enable();
       self.build();
     });
-    $(document).on('turbolinks:before-cache', function() {
+    $(document).on('turbo:before-cache', function() {
       self.destroy();
     });
   };
